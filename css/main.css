@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+:root {
+  --mainPink: #ef7998;
+  --mainYellow: rgb(249, 228, 148);
+  --mainWhite: #fff;
+  --mainBlack: #1d1d1d;
+  --mainBlue: #3366ff;
+  --yellowTrans: rgba(249, 228, 148, 0.5);
+  --mainGrey: rgb(238, 238, 238);
+}
+
+body {
+  font-family: "Kaushan Script", cursiWve;
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+}
+
+.sweet{
+  font-size: 7rem;
+  color: var(--mainWhite);
+}
+
+.height64{
+  max-height: 64vh;
+}
+
+.btn-pink{
+  color: var(--mainPink)!important;
+  border-color: var(--mainPink)!important;
+}
+.btn-pink:hover{
+  background: var(--mainBlue)!important;
+  border-color: var(--mainBlue)!important;
+  color: var(--mainWhite)!important;
+}
+.btn-blue{
+  color: var(--mainBlue)!important;
+  border-color: var(--mainBlue)!important;
+}
+.btn-blue:hover{
+  background: var(--mainPink)!important;
+  border-color: var(--mainPink)!important;
+  color: var(--mainWhite)!important;
+}
+
+/****************** navbar **/
+.navbar-toggler{
+  outline: none!important;
+}
+
+.toggler-btn {
+  padding: 5px;
+}
+
+.nav-link{
+  font-size: 1.5rem;
+  color: var(--mainPink);
+  transition: all 1s ease-in-out;
+}
+
+.nav-link:hover{
+  font-size: 1.2rem;
+  color: var(--mainBlack);
+}
+
+.nav-info:hover{
+  color: var(--mainPink);
+}
+
+/********************** cart-info **/
+#cart-info{
+  border: 0.1rem solid var(--mainBlack);
+  color: var(--mainBlack);
+  border-radius: 0.2rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+#cart-info__icon{
+  color: var(--mainBlack);
+  cursor: pointer;
+}
+#cart-info:hover{
+  color: var(--mainWhite);
+  background: var(--mainPink);
+  border: var(--mainPink);
+}
+#cart-info:hover .cart-info__icon{
+  color: var(--mainWhite);
+}
+.max-height{
+  min-height: calc(100vh  -  76px);
+  background: linear-gradient(var(--yellowTrans), var(--yellowTrans)),
+                          url('../img/header-bg.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.banner{
+  color: var(--mainWhite);
+  margin-top: -4rem;
+}
+.banner-title{
+  color: var(--mainPink);
+  font-size: 5rem;
+}
+.banner-link{
+  color: var(--mainPink);
+  font-size: 1.5rem;
+  border: 0.2rem solid var(--mainPink);
+}
+.banner-link:hover{
+  font-size: 1.5rem;
+  color: var(--mainWhite);
+  background: var(--mainPink);
+  border: 0.2rem solid var(--mainPink);
+}
+
+
+
+
+
+/********************* bar **/
+.bar {
+  width: 30px;
+  height: 5px;
+  margin: 5px;
+  background: var(--mainPink);
+  transition: all 0.5s ease;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -8px);
+}
+
+
+/******************** about ******/
+.about-img__container{
+  position: relative;
+}
+
+.about-img__container::before{
+  content: ' ';
+  position: absolute;
+  top: -1.5rem;
+  left: -1.7rem;
+  width: 100%;
+  height: 100%;
+  outline: 0.5rem solid var(--mainYellow);
+  z-index: -1;
+  transition: all 1s linear;
+}
+
+.about-img__container:hover:before{
+  top: 0;
+  left: 0;
+}
+
+/********************** store ***************/
+.store{
+  background: var(--mainGrey);
+}
+
+.search-box{
+  background: var(--mainPink);
+  color: var(--mainWhite);
+}
+
+.single-item{
+  transition: all 0.3 linear;
+}
+.single-item:hover{
+  box-shadow: 0 10px 15px rgba(0,0,0);
+}
+
+.img-container{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.store-img{
+  transition: all 1s ease-in-out;
+}
+.img-container:hover .store-img{
+  transform: scale(1.2);
+}
+
+.store-item-icon{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  background: var(--mainYellow);
+  border-top-left-radius: 1rem;
+  transition: all 1s ease-in-out;
+  transform: translate(100%, 100%);
+}
+.img-container:hover .store-item-icon{
+  transform: translate(0,0);
+}
+.store-item-icon:hover{
+  color: var(--mainPink);
+}
+
+/*********************** services *****/
+.services{
+    color: var(--mainWhite);
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/services-bg.jpeg);
+    background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      position: relative;
+      margin-top: -3rem;
+}
+.service-title{
+  letter-spacing: .5rem;
+}
+.service-text{
+  word-spacing: .5rem;
+}
+
+/******************** footer *****/
+.footer-title{
+  background: var(--mainBlack);
+}
+.footer-contact{
+  background: var(--mainGrey);
+  color: var(--mainBlack);
+  font-size: 1.5rem;
+}
+.footer-icon{
+  font-size:2rem;
+  color: var(--mainBlue);
+  transition: all 0.4 ease-in-out;
+}
+.footer-icon:hover{
+  color: var(--mainPink);
+}
+
+/*********************** cart *******/
+.cart{
+  position: absolute;
+  min-height: 10rem;
+  background: rgba(255, 255, 255, 0.7);
+  top:0;
+  right:0;
+  transition: all 0.3s ease-in-out;
+  width: 0;
+  overflow: hidden;
+}
+.show-cart{
+  width: 18rem;
+  padding: 2rem 1.5rem;
+  transition: rotateY(-360deg);
+}
+.cart-item-remove{
+  color: var(--mainPink);
+  transition: all 1s ease-in-out;
+}
+.cart-item{
+  transition: all 2s ease-in-out;
+}
+.cart-item-remove:hover{
+  transform: scale(1.1);
+  color: var(--mainBlue);
+}
+.cart-item-price{
+  font-size: 0.8rem;
+}
